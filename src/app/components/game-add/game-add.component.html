@@ -1,0 +1,19 @@
+<div class="input-container">
+  <label for="input-title">Insert Title</label>
+  <input id="input-title" class="form-control" type="text" [(ngModel)]="newGame.title">
+  <label for="input-series">Insert Series</label>
+  <input id="input-series" class="form-control" type="text" [(ngModel)]="newGame.series">
+  <label for="input-platform">Insert Platform</label>
+  <input id="input-platform" class="form-control"  type="text" [(ngModel)]="newGame.platform">
+  <label for="input-developer">Insert Developer</label>
+  <input id="input-developer" class="form-control" type="text" [(ngModel)]="newGame.developer">
+  <label for="input-genre">Insert Genre</label>
+  <input id="input-genre" class="form-control" type="text" [(ngModel)]="newGame.genre">
+  <label for="input-release">Insert Release Date</label>
+  <input id="input-release" class="form-control" type="text" [(ngModel)]="newGame.release">
+  <label for="input-rating">Insert Rating ☆</label>
+  <input id="input-rating" class="form-control" type="number" [(ngModel)]="newGame.rating">
+  <div class="add-btn-container">
+    <button type="button" class="btn btn-outline-success" (click)="saveGame()">Add/Save</button>
+  </div>
+</div>

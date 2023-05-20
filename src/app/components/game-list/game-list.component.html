@@ -1,0 +1,27 @@
+<!-- <app-game-details
+*ngFor="let game of dataManagerServ.games"
+[gameDetail]="game"></app-game-details> -->
+
+<!-- <app-game-details> -->
+  <div ngbAccordion [closeOthers]="true">
+    <div ngbAccordionItem *ngFor="let game of dataManagerServ.games" [collapsed]="game.title !== 'Spyro Reignited Edition'">
+      <h2 ngbAccordionHeader>
+        <button ngbAccordionButton>{{ game.title }}</button>
+      </h2>
+      <div ngbAccordionCollapse>
+        <div ngbAccordionBody>
+          <ng-template>
+           <p> Series: {{game.series}} </p>
+           <p> Platform: {{game.platform}} </p>
+           <p> Developer: {{game.developer}} </p>
+           <p> Genre: {{game.genre}} </p>
+           <p> Release Date: {{game.release}}</p>
+           <p> Rating: <ngb-rating [(rate)]="game.rating" [readonly] = true></ngb-rating> <b>{{game.rating}}</b></p>
+           <!-- <button (click)="deleteGame()">Delete</button> -->
+           <button type="button" class="btn btn-outline-danger">Delete (Not Working)</button>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- </app-game-details> -->
